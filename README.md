@@ -67,8 +67,15 @@ npm run verify              # 无 Electron：起服务 + 打开默认浏览器�
 | 端口 | `--port 0` 由 OS 分配，从 stdout 解析，规避 3080 占用 |
 | DSH 版本 | 锁定 `@deepseek-ai/dsh@0.1.0-rc.6` |
 
+## 图标与第三方声明
+
+应用图标 `DeepSeekHarness-WhaleGirl.ico` 来源于
+[deepseek-whale-girl-icon](https://github.com/fornarwhal/deepseek-whale-girl-icon)，
+采用 **CC BY-NC-SA 4.0**（署名-非商业性使用-相同方式共享）许可。
+完整署名与使用限制见 [`NOTICE.md`](NOTICE.md)。
+
 ## 待办
 
-- [ ] 正式图标 `build/icon.ico`（当前用 Electron 默认图标）
+- [ ] 商用分发前替换图标（当前图标为 CC BY-NC-SA 4.0 非商用许可）
 - [ ] 代码签名证书（消除 SmartScreen 提示）
 - [ ] 自动更新（electron-updater）
