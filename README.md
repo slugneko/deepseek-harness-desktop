@@ -3,6 +3,12 @@
 DeepSeek Harness 的 Windows 桌面应用：安装后双击桌面图标即可在独立窗口中使用，
 界面、样式、功能与 Web 版保持一致。
 
+## 下载
+
+> **直接下载安装包：**
+>
+> 👉 [**DeepSeek-Harness-Setup-0.1.0-rc.6.exe**](https://github.com/slugneko/deepseek-harness-desktop/releases/latest/download/DeepSeek-Harness-Setup-0.1.0-rc.6.exe)（单文件 EXE，约 168 MB，每用户免管理员安装）
+
 ## 特性
 
 - 单文件 EXE 安装包，每用户免管理员权限安装
