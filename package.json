@@ -1,0 +1,19 @@
+{
+  "name": "deepseek-harness-desktop",
+  "version": "0.1.0-rc.6",
+  "private": true,
+  "description": "DeepSeek Harness Windows desktop installer (Electron shell + portable Node child process)",
+  "author": "DeepSeek Harness Desktop",
+  "license": "MIT",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:runtime": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-runtime.ps1",
+    "dist": "npm run build:runtime && electron-builder --win",
+    "verify": "node scripts/launch.js"
+  },
+  "devDependencies": {
+    "electron": "43.4.0",
+    "electron-builder": "26.15.3"
+  }
+}

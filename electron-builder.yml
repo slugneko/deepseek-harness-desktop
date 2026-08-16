@@ -1,0 +1,40 @@
+appId: com.deepseek.harness.desktop
+productName: DeepSeek Harness
+copyright: MIT
+
+# Electron 壳无原生依赖（原生模块在 build/runtime，由便携 Node 子进程加载），
+# 关闭针对 Electron ABI 的原生模块重编，避免多余的 electron-rebuild。
+npmRebuild: false
+
+directories:
+  output: dist
+  buildResources: build
+
+files:
+  - electron/**/*
+  - package.json
+
+# DSH 运行体（便携 Node + @deepseek-ai/dsh 及其 node_modules）不进 asar，
+# 作为只读资源放到 resources/runtime，由 Electron 主进程 spawn 使用。
+extraResources:
+  - from: build/runtime
+    to: runtime
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: DeepSeekHarness-WhaleGirl.ico
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: DeepSeek Harness
+  runAfterFinish: true
+  installerIcon: DeepSeekHarness-WhaleGirl.ico
+  uninstallerIcon: DeepSeekHarness-WhaleGirl.ico
+  artifactName: "DeepSeek-Harness-Setup-${version}.${ext}"
